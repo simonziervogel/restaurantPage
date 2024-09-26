@@ -1,3 +1,31 @@
-* {
-  margin-left: 0px;
+
+
+body, html{
+
+ height: 100%;
+  width: 100%;
+  margin: 0;
+
+}
+/* TODO Background Bild
+.background{
+  background-image: url("/assets/homepage.jpeg");
+  height: 100%;
+  width: 100%;
+  background-size: cover;
+  background-repeat: no-repeat;
+  position: absolute;
+}
+*/
+#reserve, h1, p{
+  text-align: center;
+}
+h1{
+  font-size: 100px;
+  font-weight: lighter;
+  font-family: Avenir, Montserrat, Corbel, 'URW Gothic', source-sans-pro, sans-serif;
+
+}
+*{
+  font-family: "DejaVu Sans Light", sans-serif;
 }

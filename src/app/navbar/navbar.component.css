@@ -1,9 +1,13 @@
 ul li{
 
-  font-family: "Brush Script MT", "Courier New", cursive;
+  font-family: "DejaVu Sans Light", sans-serif;
+  margin-bottom: 50px;
+  font-size: 30px;
 }
 ul {
   list-style: none;
+  border-left: 5px solid black;
   padding: 50px;
   font-size: larger;
+  font-family: "DejaVu Sans Light", sans-serif;
 }
