@@ -1,0 +1,27 @@
+
+
+nav{
+  height: 200px;
+  width: 250px;
+  background: rgba(0, 128, 0, 0.3);
+  border: 2px solid black;
+  border-radius: 10px;
+
+}
+.brand-logo{
+  border-radius: 2000px;
+  width: 200px;
+  height: 200px;
+}
+
+.row-container {
+  display: flex;
+  flex-direction: row;
+}
+
+#sidebar{
+
+}
+#content{
+
+}
