@@ -8,13 +8,18 @@
 <!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * -->
 
 <main>
-  <header class="brand-name">
+  <div class="row-container">
+    <div>
     <img class="brand-logo" src="/assets/logo.jpeg" alt="logo" aria-hidden="true">
-  </header>
-  <section class="content">
-    <app-home></app-home>
-  </section>
+    <nav>
+      <app-navbar></app-navbar>
+    </nav>
+    </div>
+    <div>
+    <router-outlet></router-outlet>
+    </div>
+  </div>
 </main>
 
 
-<router-outlet />
+
