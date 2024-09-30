@@ -1,0 +1,49 @@
+.container{
+  display: grid;
+  padding-left: 0px;
+  padding-right: 150px;
+  padding-top: 15px;
+  column-gap: 44px;
+  row-gap: 44px;
+  grid-template-rows: repeat(3, 1fr);
+  grid-template-columns: repeat(5, 1fr);
+
+}
+
+#menu{
+  font-size: 80px;
+  font-weight: lighter;
+  font-family: Avenir, Montserrat, Corbel, 'URW Gothic', source-sans-pro, sans-serif;
+  text-align: center;
+  padding-right: 150px;
+}
+
+
+*{
+  font-family: "DejaVu Sans Light", sans-serif;
+  text-align: center;
+}
+.dishname{
+  min-height: 90px;
+}
+
+.description{
+  min-height: 100px;
+}
+.buttonOrder{
+  display: inline-block;
+  background-color: white;
+  border-radius: 15px;
+  font-family: Avenir, Montserrat, Corbel, 'URW Gothic', source-sans-pro, sans-serif;
+  font-size: 18px;
+  padding: 10px 15px;
+  transition-duration: 0.4s;
+  cursor: pointer;
+}
+
+
+.buttonOrder:hover{
+  color: #ff0000;
+  background-color: white;
+  box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
+}

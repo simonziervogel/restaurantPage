@@ -1,13 +1,13 @@
 
 
-nav{
-  height: 200px;
+/*nav{
+  height: 100%;
   width: 250px;
-  background: rgba(0, 128, 0, 0.3);
-  border: 2px solid black;
-  border-radius: 10px;
+  }
+*/
 
-}
+
+
 .brand-logo{
   border-radius: 2000px;
   width: 200px;

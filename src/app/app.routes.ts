@@ -29,7 +29,7 @@ export const routes: Routes = [
   {
     path: 'contact',
     component: ContactComponent,
-    title: 'Menu'
+    title: 'Contact'
   }
 
 ];

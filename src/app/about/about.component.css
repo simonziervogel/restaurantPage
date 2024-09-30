@@ -1,0 +1,49 @@
+.container{
+  display: grid;
+  grid-template-rows: auto auto auto;
+  grid-template-columns: 1fr;
+  padding-right: 120px;
+
+
+
+
+
+}
+h2{
+  font-size: 33px;
+}
+h3{
+  font-size: 25px;
+}
+h4{
+  font-size: 19px;
+  min-height: 45px;
+}
+
+#personell{
+  padding-top: 20px;
+  display: grid;
+  grid-column: 1;
+  grid-row: 3;
+  grid-template-rows: 1fr;
+  grid-template-columns: repeat(5, 1fr);
+  column-gap: 40px;
+  row-gap: 14px;
+}
+
+.staff{
+  border-style: groove;
+  border-width: 2px;
+  padding: 10px 20px;
+  border-color: hsl(0, 100%, 50%);
+  border-radius: 12px;
+}
+
+*{
+  font-family: "DejaVu Sans Light", sans-serif;
+  text-align: center;
+
+
+}
+
+
