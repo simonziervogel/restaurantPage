@@ -3,11 +3,31 @@ ul li{
   font-family: "DejaVu Sans Light", sans-serif;
   margin-bottom: 50px;
   font-size: 30px;
+
 }
 ul {
   list-style: none;
   border-left: 5px solid black;
+  min-width: 300px;
   padding: 50px;
   font-size: larger;
   font-family: "DejaVu Sans Light", sans-serif;
+
+}
+a{
+  display: inline-block;
+  color: black;
+  border-radius: 15px;
+  transition-duration: 0.4s;
+  cursor: pointer;
+
+
+
+}
+
+a:hover{
+  color: black;
+  background-color: white;
+  box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
+  padding: 20px 30px;
 }

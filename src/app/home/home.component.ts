@@ -11,5 +11,13 @@ import {RouterLink} from "@angular/router";
   styleUrl: './home.component.css'
 })
 export class HomeComponent {
+  constructor() {
+    // Check if the component has been visited before
+    const hasVisited = localStorage.getItem('myComponentVisited');
 
+    if (!hasVisited) {
+      alert("Willkommen in der Komponente!");
+      localStorage.setItem('myComponentVisited', 'true');
+    }
+  }
 }
