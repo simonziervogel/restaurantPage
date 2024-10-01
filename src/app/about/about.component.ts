@@ -1,6 +1,7 @@
 import {Component, OnInit} from '@angular/core';
-import {WeatherService} from "../services/weather.service";
+
 import {HttpClient, HttpClientModule} from "@angular/common/http";
+import {WeatherService} from "../services/weather.service";
 
 
 interface weather{
@@ -23,12 +24,13 @@ export class AboutComponent implements OnInit {
     condition: "sunny"
   }
 
-  constructor(private service:WeatherService){
-
+  constructor(private service:WeatherService)
+    {
   }
 
   ngOnInit(): void {
     this.service.getWeather().subscribe((data: any) => {
+      console.log(data);
       this.weatherInfo = data;
     });
   }
