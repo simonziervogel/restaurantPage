@@ -40,13 +40,16 @@
   <div class="containerWeather">
     <ul id="weather">
       <li>
-        <p>Temperatur: {{weatherInfo.current_weather.temperature}}</p>
+        <p>Unser Standort: Giesinger Bahnhofpl. 9, 81539 München</p>
       </li>
       <li>
-        <p>Uhrzeit: {{weatherInfo.current_weather.time}}</p>
+        <p>Temperatur: {{weatherInfo.current_weather.temperature}}℃</p>
       </li>
       <li>
-        Wetter : {{weatherInfo.current_weather.weathercode}}
+        <p>Zuletzt aktualisiert: {{weatherInfo.current_weather.time}}</p>
+      </li>
+      <li>
+        Wetter : {{weatherTranslator(weatherInfo.current_weather.weathercode)}}
       </li>
     </ul>
 

@@ -34,11 +34,24 @@ export class AboutComponent implements OnInit {
 
   ngOnInit(): void {
     this.service.getWeather().subscribe((data: any) => {
-      console.log(data);
       this.weatherInfo.current_weather = data.current_weather;
-      console.log(this.weatherInfo.current_weather);
     });
   }
 
+  weatherTranslator(weathercode: number): string {
+    if(0<= weathercode && weathercode <=3){
+      return "Klares, gutes Wetter"
+    }
+    else if([45,48,51,53,55,56,57,61,66,80,85,71].includes(weathercode)){
+      return "Leichter Regen oder Nebel"
+    }
+    else if([63,65,67,73,75,77,81,82,86,95,96,99].includes(weathercode)){
+      return "Starker Regen oder Gewitter";
+    }
+    else{
+      return "Unbekannter Wettercode"
+    }
+
+  }
 
 }
