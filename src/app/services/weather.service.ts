@@ -12,6 +12,6 @@ export class WeatherService {
   }
   getWeather():Observable<any>{
     //TODO funktion parameterisieren
-    return this.http.get("https://api.open-meteo.com/v1/forecast?latitude=52.52&longitude=13.41&hourly=temperature_2m");
+    return this.http.get("https://api.open-meteo.com/v1/forecast?latitude=48.11&longitude=11.60&current_weather=true");
 }
 }

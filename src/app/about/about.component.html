@@ -39,9 +39,15 @@
 
   <div class="containerWeather">
     <ul id="weather">
-      <li>Unsere Location </li>
-      <li>Das Wetter heute</li>
-      <li>Die Temperatur</li>
+      <li>
+        <p>Temperatur: {{weatherInfo.current_weather.temperature}}</p>
+      </li>
+      <li>
+        <p>Uhrzeit: {{weatherInfo.current_weather.time}}</p>
+      </li>
+      <li>
+        Wetter : {{weatherInfo.current_weather.weathercode}}
+      </li>
     </ul>
 
   </div>

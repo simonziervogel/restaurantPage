@@ -18,20 +18,25 @@ interface weather{
   styleUrl: './about.component.css'
 })
 export class AboutComponent implements OnInit {
-  weatherInfo: weather = {
-    temperature: 20,
-    location: "München",
-    condition: "sunny"
+  weatherInfo: any = {
+    current_weather: {
+      temperature: 0,
+      time: "",
+      location: "",
+      weathercode: 0
+    }
   }
 
   constructor(private service:WeatherService)
     {
+
   }
 
   ngOnInit(): void {
     this.service.getWeather().subscribe((data: any) => {
       console.log(data);
-      this.weatherInfo = data;
+      this.weatherInfo.current_weather = data.current_weather;
+      console.log(this.weatherInfo.current_weather);
     });
   }
 

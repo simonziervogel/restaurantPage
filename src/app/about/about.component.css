@@ -30,12 +30,16 @@ h4{
   column-gap: 40px;
   row-gap: 14px;
 }
+#personell div:hover{
+  box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
+  padding: 20px 40px;
+}
 
 .staff{
   border-style: groove;
   border-width: 2px;
   padding: 10px 20px;
-  border-color: hsl(0, 100%, 50%);
+
   border-radius: 12px;
 }
 
@@ -45,6 +49,8 @@ h4{
 
 
 }
+
+
 
 .containerWeather{
   min-height: 300px;
