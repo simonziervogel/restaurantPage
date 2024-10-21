@@ -1,44 +1,61 @@
 
 <form [formGroup]="contactform" class="container" (ngSubmit)="onSubmit()">
   <div>
-    <label>Ihr Name</label>
+    <label>Name</label>
     <input type="text" name="name" formControlName="name" placeholder="Bitte vollständigen Namen eingeben">
 
-    @if(contactform.controls['name'].invalid && contactform.controls['name'].touched){
-      <div class="error">
-        Name ist erforderlich
+
+      <div [style.visibility]="contactform.controls['name'].invalid && contactform.controls['name'].touched ? 'visible' : 'hidden'"  class="error">
+        Name muss ausgefüllt sein
       </div>
-    }
+
   </div>
 
   <div>
     <label>E-Mail</label>
     <input type="email" name="email" formControlName="email" placeholder="Bitte E-Mail Adresse eingeben">
-    @if(contactform.controls['email'].invalid && contactform.controls['email'].touched){
-      <div class="error">
-        Funktionierende E-Mail ist erforderlich
-      </div>
-    }
+<div [style.visibility]="contactform.controls['email'].invalid && contactform.controls['email'].touched ? 'visible' : 'hidden'"  class="error">
+  @if (contactform.controls['email'].hasError('required') && contactform.controls['email'].touched){
+  <div class="error">
+      E-Mail muss ausgefüllt sein
+    </div>}
+  @else if (contactform.controls['email'].hasError('email') && contactform.controls['email'].touched){
+    <div class="error">
+      Funktionierende E-Mail ist erforderlich
+    </div>}
+</div>
   </div>
 
   <div>
     <label>Telefonnummer</label>
     <input type="number" name="telefonnummer" formControlName="telephone" placeholder="Bitte Ihre Telefonnummer eingeben">
-    @if(contactform.controls['telephone'].invalid && contactform.controls['telephone'].touched){
-      <div class="error">
-       Funktionierende Telefonnummer ist erforderlich
+
+      <div [style.visibility]="contactform.controls['telephone'].invalid && contactform.controls['telephone'].touched ? 'visible' : 'hidden'"  class="error">
+        @if (contactform.controls['telephone'].hasError('required') && contactform.controls['telephone'].touched){
+          <div class="error">
+            Telefonnummer muss ausgefüllt sein
+          </div>}
+        @else if (contactform.controls['telephone'].hasError('max') && contactform.controls['telephone'].touched){
+          <div class="error">
+            Funktionierende Telefonnummer ist erforderlich
+          </div>}
+        @else if (contactform.controls['telephone'].hasError('min') && contactform.controls['telephone'].touched){
+          <div class="error">
+            Funktionierende Telefonnummer ist erforderlich
+          </div>}
+
       </div>
-    }
+
   </div>
 
   <div>
     <label>Kommentar</label>
     <textarea name="message" formControlName="comment" placeholder="Hier ist Platz für einen möglichen Kommentar"></textarea>
-    @if(contactform.controls['comment'].invalid && contactform.controls['comment'].touched){
-      <div class="error">
+
+      <div [style.visibility]="contactform.controls['comment'].invalid && contactform.controls['comment'].touched ? 'visible' : 'hidden'"  class="error">
         Na ist erforderlich
       </div>
-    }
+
   </div>
 
   <button type="submit" name="submit" value="Submit"> Submit </button>

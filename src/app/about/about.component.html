@@ -46,10 +46,10 @@
         <p>Temperatur: {{weatherInfo.current_weather.temperature}}℃</p>
       </li>
       <li>
-        <p>Zuletzt aktualisiert: {{weatherInfo.current_weather.time}}</p>
+        <p>Zuletzt aktualisiert: {{timeTranslator(this.weatherInfo.current_weather.time)}}</p>
       </li>
       <li>
-        Wetter : {{weatherTranslator(weatherInfo.current_weather.weathercode)}}
+        Wetter : {{weatherTranslator(weatherInfo.current_weather.weathercode) }}
       </li>
     </ul>
 

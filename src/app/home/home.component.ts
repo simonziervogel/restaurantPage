@@ -16,8 +16,16 @@ export class HomeComponent {
     const hasVisited = localStorage.getItem('myComponentVisited');
 
     if (!hasVisited) {
-      alert("Willkommen in der Komponente!");
+      alert("Willkommen auf unserer Homepage!");
       localStorage.setItem('myComponentVisited', 'true');
     }
+  }
+  buttonClicked() {
+    fetch('http://localhost:8080/button-clicked')
+      .then(response => response.text())
+      .then(data => console.log(data))
+      .catch((error) => {
+        console.error('Error:', error);
+      });
   }
 }

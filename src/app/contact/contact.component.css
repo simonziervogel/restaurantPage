@@ -4,7 +4,7 @@
   row-gap: 44px;
   grid-template-rows: repeat(5, auto);
   grid-template-columns: repeat(2, minmax(300px, auto));
-  padding: 250px 250px;
+  padding: 250px 150px;
 }
 /*
 label{
@@ -26,7 +26,8 @@ label{
 
 }
 input, textarea {
-  flex-grow: 1;
+  min-height: 82px;
+  min-width: 480px;
   padding: 20px 20px;
   width: 100%;
 }
@@ -70,4 +71,12 @@ color: red;
 
 form{
 
+}
+button:disabled{
+  pointer-events: none;
+  cursor: not-allowed;
+  opacity: 0.65;
+  filter: alpha(opacity=65);
+  -webkit-box-shadow: none;
+  box-shadow: none;
 }
